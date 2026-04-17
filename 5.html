@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Bíblica - Amparo HAZAQ</title>
+    <style>
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header-top { background: #f8f8f8; padding: 30px 20px; border-bottom: 4px solid #d4af37; text-align: center; }
+        .hebraico { font-size: 2.2rem; color: #d4af37; display: block; font-family: serif; margin: 10px 0; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .img-principal { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 25px; }
+
+        h2 { color: #b8860b; text-transform: uppercase; font-size: 1.2rem; border-left: 5px solid #d4af37; padding-left: 15px; margin-top: 40px; }
+        
+        .box-estudo { background: #fdf9ec; border: 1px solid #eaddb3; padding: 25px; border-radius: 8px; margin: 20px 0; }
+        .box-estudo h3 { color: #b8860b; margin-top: 0; text-transform: uppercase; font-size: 1.1rem; }
+
+        .versiculo-chave { font-style: italic; color: #555; background: #fff; padding: 15px; border-radius: 5px; border: 1px solid #eee; margin: 15px 0; display: block; }
+
+        .botao-detalhe { background: #1a1a1a; border: 1px solid #333; color: #d4af37; width: 100%; text-align: left; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 5px; margin-top: 10px; display: flex; justify-content: space-between; text-transform: uppercase; font-size: 0.85rem; }
+        .conteudo-detalhe { display: none; padding: 20px; background: #f9f9f9; border: 1px solid #eee; border-radius: 0 0 5px 5px; font-size: 0.95rem; text-align: justify; }
+
+        .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 50px 0; }
+        .btn { text-align: center; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-menu { background: #555; color: #fff; }
+        .btn-diario { background: #d4af37; color: #1a1a1a; border: 1px solid #d4af37; }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Biblioteca Bíblica</h1>
+        <span class="hebraico">ספרייה תנ"כית</span>
+        <p><b>A Base Teológica do Amparo HAZAQ</b></p>
+    </div>
+
+    <div class="container">
+        <img src="2-img.png" alt="Estudo Bíblico" class="img-principal">
+
+        <div class="box-estudo">
+            <h3>O Mandato do Amparo</h3>
+            <p>A Bíblia não sugere o cuidado com órfãos e viúvas (idosos); ela o ordena como prova de regeneração. Este módulo serve para alinhar o coração do seminarista com o coração de Deus.</p>
+        </div>
+
+        <h2>Estudos Teológicos</h2>
+        <p>Selecione o tema para aprofundamento:</p>
+
+        <div class="detalhe-container">
+            <button class="botao-detalhe" onclick="toggle('b1')">A Causa do Órfão: Defesa e Justiça <span>+</span></button>
+            <div id="b1" class="conteudo-detalhe">
+                <span class="versiculo-chave">"Pai dos órfãos e juiz das viúvas é Deus em sua santa habitação." (Salmo 68:5)</span>
+                <b>Reflexão:</b> Deus se identifica diretamente com o órfão. Quando o seminarista atua no Amparo, ele exerce um atributo comunicável de Deus: a Paternidade Provedora. O órfão na Bíblia representa aquele que não tem voz jurídica ou proteção social. Atuar aqui é fazer justiça bíblica.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('b2')">A Honra à Viúva e ao Idoso <span>+</span></button>
+            <div id="b2" class="conteudo-detalhe">
+                <span class="versiculo-chave">"Honra as viúvas que verdadeiramente são viúvas." (1 Timóteo 5:3)</span>
+                <b>Reflexão:</b> No contexto bíblico, a viúva idosa era o símbolo da vulnerabilidade total. A Igreja Primitiva tinha uma "lista de assistência" rigorosa. O Amparo HAZAQ resgata essa responsabilidade da Igreja de não abandonar seus anciãos ao desprezo estatal ou familiar. Honrar é suprir a necessidade física e emocional.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('b3')">O Culto Racional e a Religião Pura <span>+</span></button>
+            <div id="b3" class="conteudo-detalhe">
+                <span class="versiculo-chave">"A religião pura e imaculada... é esta: visitar os órfãos e as viúvas..." (Tiago 1:27)</span>
+                <b>Reflexão:</b> Tiago define a liturgia do cristão fora do templo. O verdadeiro "culto" acontece no asilo e no orfanato. Se o conhecimento teológico do seminarista não se traduz em mãos estendidas para o fraco, sua teologia é morta.
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <a href="1.html" class="btn btn-menu">⬅ MENU INICIAL</a>
+            <a href="6.html" class="btn btn-diario">DIÁRIO DE BORDO ➜</a>
+        </div>
+    </div>
+
+    <script>
+        function toggle(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
