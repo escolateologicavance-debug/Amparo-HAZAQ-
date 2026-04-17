@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificação Final - Amparo HAZAQ</title>
+    <style>
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header-top { background: #f8f8f8; padding: 40px 20px; border-bottom: 4px solid #d4af37; text-align: center; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; text-align: center; }
+        .img-principal { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 25px; }
+        
+        h2 { color: #b8860b; text-transform: uppercase; font-size: 1.4rem; margin-top: 30px; }
+        
+        .mensagem-final { background: #fdf9ec; border: 1px solid #eaddb3; padding: 30px; border-radius: 8px; margin: 25px 0; text-align: justify; }
+        .mensagem-final h3 { color: #b8860b; text-align: center; text-transform: uppercase; margin-top: 0; }
+
+        .selo-hazaq { font-size: 3rem; margin: 20px 0; display: block; }
+
+        .form-certificacao { background: #f9f9f9; border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-top: 30px; text-align: left; }
+        label { display: block; font-weight: bold; margin: 15px 0 5px; color: #333; }
+        input[type="text"], input[type="email"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; margin-bottom: 10px; }
+
+        .area-conclusao { background: #1a1a1a; padding: 25px; border-radius: 8px; text-align: center; margin-top: 30px; }
+        .area-conclusao h3 { color: #d4af37; margin-top: 0; text-transform: uppercase; }
+        .btn-acao { border: none; padding: 18px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; text-transform: uppercase; margin-top: 10px; font-size: 0.9rem; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-gm { background: #d4af37; color: #1a1a1a; }
+        
+        .footer-nav { margin: 50px 0; }
+        .btn-home { display: inline-block; background: #555; color: #fff; text-decoration: none; padding: 15px 30px; border-radius: 4px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Conclusão do Treinamento</h1>
+        <p><b>Amparo HAZAQ • Fortalecidos para Fortalecer</b></p>
+    </div>
+
+    <div class="container">
+        <img src="1-img.png" alt="Conclusão HAZAQ" class="img-principal">
+
+        <div class="selo-hazaq">📜</div>
+
+        <h2>Treinamento Concluído</h2>
+
+        <div class="mensagem-final">
+            <h3>Palavra de Envio</h3>
+            <p>Você percorreu todas as trilhas do Amparo HAZAQ. Aprendeu sobre a escuta ativa com idosos, o cuidado protetor com órfãos, a fundamentação bíblica do nosso serviço e a importância da logística e da autoavaliação. Agora, você não é apenas um voluntário, mas um <b>Seminarista HAZAQ</b> preparado para manifestar o Reino através do acolhimento social.</p>
+            <p>Lembre-se: O serviço é árduo, mas a recompensa é eterna. Que sua vida seja uma extensão do amparo divino para aqueles que mais precisam.</p>
+        </div>
+
+        <div class="form-certificacao">
+            <h3>Solicitar Certificado</h3>
+            <p><small>Preencha os dados abaixo para que a coordenação valide seu estágio e emita seu certificado de conclusão.</small></p>
+            
+            <label>Nome Completo para o Certificado:</label>
+            <input type="text" id="nome_final" placeholder="Como deve aparecer no documento">
+
+            <label>Seu E-mail de Contato:</label>
+            <input type="email" id="email_final" placeholder="email@exemplo.com">
+
+            <label>Data de Início do Estágio:</label>
+            <input type="text" id="data_inicio" placeholder="Ex: Janeiro de 2026">
+        </div>
+
+        <div class="area-conclusao">
+            <h3>Solicitar Agora</h3>
+            <button class="btn-acao btn-wa" onclick="solicitarCertificado('wa')">Solicitar via WhatsApp</button>
+            <button class="btn-acao btn-gm" onclick="solicitarCertificado('mail')">Solicitar via Gmail</button>
+        </div>
+
+        <div class="footer-nav">
+            <a href="1.html" class="btn-home">⬅ VOLTAR AO MENU PRINCIPAL</a>
+        </div>
+    </div>
+
+    <script>
+        function solicitarCertificado(canal) {
+            const fone = "5566984666186";
+            const emailDestino = "escolateologicavance@gmail.com";
+
+            const nome = document.getElementById('nome_final').value;
+            const emailUser = document.getElementById('email_final').value;
+            const dataInicio = document.getElementById('data_inicio').value;
+
+            if(!nome || !emailUser) {
+                alert("Por favor, preencha seu nome e e-mail para solicitação.");
+                return;
+            }
+
+            const mensagem = 
+                `*SOLICITAÇÃO DE CERTIFICADO - AMPARO HAZAQ*%0A%0A` +
+                `*Concluinte:* ${nome}%0A` +
+                `*E-mail:* ${emailUser}%0A` +
+                `*Estágio Iniciado em:* ${dataInicio}%0A%0A` +
+                `Declaro ter concluído todos os módulos de treinamento e registros práticos do Amparo HAZAQ.`;
+
+            if (canal === 'wa') {
+                window.open(`https://api.whatsapp.com/send?phone=${fone}&text=${mensagem}`, '_blank');
+            } else {
+                const assunto = encodeURIComponent(`SOLICITAÇÃO DE CERTIFICADO - ${nome}`);
+                const corpoEmail = mensagem.replace(/%0A/g, '%0D%0A').replace(/\*/g, '');
+                window.location.href = `mailto:${emailDestino}?subject=${assunto}&body=${corpoEmail}`;
+            }
+        }
+    </script>
+</body>
+</html>
