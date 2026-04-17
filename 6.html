@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo - Amparo HAZAQ</title>
+    <style>
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header-top { background: #f8f8f8; padding: 30px 20px; border-bottom: 4px solid #d4af37; text-align: center; }
+        .hebraico { font-size: 2.2rem; color: #d4af37; display: block; font-family: serif; margin: 10px 0; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .img-principal { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 25px; }
+
+        h2 { color: #b8860b; text-transform: uppercase; font-size: 1.2rem; border-left: 5px solid #d4af37; padding-left: 15px; margin-top: 40px; }
+        
+        .instrucao-diario { background: #fdf9ec; border: 1px solid #eaddb3; padding: 25px; border-radius: 8px; margin: 20px 0; }
+        .instrucao-diario h3 { color: #b8860b; margin-top: 0; text-transform: uppercase; font-size: 1rem; }
+
+        /* Estilo dos Formulários de Registro */
+        .form-section { background: #f9f9f9; border: 1px solid #eee; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .form-section label { display: block; font-weight: bold; margin-bottom: 8px; color: #333; }
+        .form-section input, .form-section textarea, .form-section select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; box-sizing: border-box; font-family: inherit; }
+        
+        .btn-salvar { background: #1a1a1a; color: #d4af37; border: none; padding: 15px 25px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; text-transform: uppercase; }
+        .btn-salvar:hover { background: #d4af37; color: #1a1a1a; }
+
+        .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 50px 0; }
+        .btn { text-align: center; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-menu { background: #555; color: #fff; }
+        .btn-proximo { background: #d4af37; color: #1a1a1a; border: 1px solid #d4af37; }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Diário de Bordo</h1>
+        <span class="hebraico">יומן מסע</span>
+        <p><b>Registro de Prática e Gestão Emocional</b></p>
+    </div>
+
+    <div class="container">
+        <img src="4-img.png" alt="Registro e Prática" class="img-principal">
+
+        <div class="instrucao-diario">
+            <h3>A Importância do Registro</h3>
+            <p>O Diário de Bordo não é apenas burocracia. É o documento que garante a continuidade do amparo e protege o seminarista. Registrar o que foi feito, o que foi ouvido e como você se sentiu evita a fadiga ministerial e garante que nenhum detalhe do cuidado seja esquecido.</p>
+        </div>
+
+        <h2>1. Relatório de Visita Prática</h2>
+        <div class="form-section">
+            <label>Data do Atendimento:</label>
+            <input type="date">
+
+            <label>Público Atendido:</label>
+            <select>
+                <option>Idosos (Asilo)</option>
+                <option>Crianças/Adolescentes (Orfanato)</option>
+            </select>
+
+            <label>Resumo da Atividade:</label>
+            <textarea rows="4" placeholder="Descreva o que foi realizado (conversa, auxílio na alimentação, atividade de lazer, oração...)"></textarea>
+
+            <label>Observações Relevantes:</label>
+            <textarea rows="3" placeholder="Notou alguma alteração física ou emocional no acolhido? Registre aqui."></textarea>
+            
+            <button class="btn-salvar" onclick="alert('Registro salvo localmente!')">Salvar Relatório de Visita</button>
+        </div>
+
+        <h2>2. Gestão de Emoções (Seminarista)</h2>
+        <div class="form-section">
+            <p><small>Este campo é para sua saúde mental. O cuidado com o outro exige que você esteja fortalecido.</small></p>
+            
+            <label>Como você se sente após este atendimento?</label>
+            <select>
+                <option>Fortalecido e em Paz</option>
+                <option>Cansado, mas Realizado</option>
+                <option>Sobrecarregado Emocionalmente</option>
+                <option>Frustrado com alguma situação</option>
+            </select>
+
+            <label>Relato Pessoal:</label>
+            <textarea rows="4" placeholder="Use este espaço para desabafar ou registrar o que Deus falou ao seu coração hoje."></textarea>
+            
+            <button class="btn-salvar" onclick="alert('Autoavaliação registrada!')">Registrar Emoções</button>
+        </div>
+
+        <div class="footer-nav">
+            <a href="1.html" class="btn btn-menu">⬅ VOLTAR AO MENU</a>
+            <a href="7.html" class="btn btn-proximo">MURAL DE ORAÇÃO ➜</a>
+        </div>
+    </div>
+
+</body>
+</html>
