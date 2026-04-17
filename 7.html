@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mural de Oração - Amparo HAZAQ</title>
+    <style>
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header-top { background: #f8f8f8; padding: 30px 20px; border-bottom: 4px solid #d4af37; text-align: center; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .img-principal { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 25px; }
+        
+        h2 { color: #b8860b; text-transform: uppercase; font-size: 1.2rem; border-left: 5px solid #d4af37; padding-left: 15px; margin-top: 40px; }
+        
+        .instrucao-mural { background: #fdf9ec; border: 1px solid #eaddb3; padding: 25px; border-radius: 8px; margin: 20px 0; }
+        .instrucao-mural h3 { color: #b8860b; margin-top: 0; text-transform: uppercase; font-size: 1.1rem; }
+
+        .form-section { background: #f9f9f9; border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 25px; }
+        label { display: block; font-weight: bold; margin: 15px 0 5px; color: #333; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: inherit; margin-bottom: 10px; }
+
+        .area-envio { background: #1a1a1a; padding: 25px; border-radius: 8px; text-align: center; margin-top: 30px; }
+        .area-envio h3 { color: #d4af37; margin-top: 0; text-transform: uppercase; }
+        .btn-acao { border: none; padding: 18px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; text-transform: uppercase; margin-top: 10px; font-size: 0.9rem; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-gm { background: #d4af37; color: #1a1a1a; }
+        
+        .citacao-biblica { font-style: italic; color: #555; text-align: center; padding: 20px; border-top: 1px solid #eee; margin-top: 20px; }
+
+        .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 50px 0; }
+        .btn { text-align: center; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 0.8rem; }
+        .btn-menu { background: #555; color: #fff; }
+        .btn-proximo { background: #1a1a1a; color: #d4af37; border: 1px solid #1a1a1a; }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Mural de Oração</h1>
+        <p><b>Gestão de Clamor e Necessidades Espirituais</b></p>
+    </div>
+
+    <div class="container">
+        <img src="5-img.png" alt="Mural de Oração Amparo HAZAQ" class="img-principal">
+
+        <div class="instrucao-mural">
+            <h3>A Sentinela do Amparo</h3>
+            <p>O trabalho no Amparo HAZAQ é, antes de tudo, uma guerra espiritual. O Mural de Oração serve para que as necessidades dos idosos e órfãos não sejam apenas ouvidas, mas levadas ao trono da graça. Este registro permite que o Seminário acompanhe os pedidos e celebre as respostas de Deus.</p>
+        </div>
+
+        <h2>Registrar Pedido de Clamor</h2>
+        <div class="form-section">
+            <label>Seminarista Intercessor:</label>
+            <input type="text" id="nome_intercessor" placeholder="Seu nome completo">
+
+            <label>Nome do Acolhido (Iniciais para preservar privacidade):</label>
+            <input type="text" id="acolhido_nome" placeholder="Ex: Sr. J. ou Criança M.">
+
+            <label>Categoria do Pedido:</label>
+            <select id="categoria_pedido">
+                <option value="Saúde Física">Saúde Física / Enfermidade</option>
+                <option value="Conforto Emocional">Conforto Emocional / Solidão</option>
+                <option value="Restauração Familiar">Restauração Familiar</option>
+                <option value="Salvação / Decisão">Salvação / Decisão por Cristo</option>
+                <option value="Provisão Material">Provisão Material Específica</option>
+            </select>
+
+            <label>Descrição Detalhada do Pedido:</label>
+            <textarea id="detalhe_pedido" rows="5" placeholder="Descreva a situação específica para a qual estamos clamando..."></textarea>
+            
+            <label>Urgência do Clamor:</label>
+            <select id="urgencia_pedido">
+                <option value="Normal">Rotina de Intercessão</option>
+                <option value="Urgente">Urgente (Crise ou Risco)</option>
+            </select>
+        </div>
+
+        <div class="area-envio">
+            <h3>Enviar ao Mural Central</h3>
+            <button class="btn-acao btn-wa" onclick="enviarMural('wa')">Enviar via WhatsApp (Coordenador)</button>
+            <button class="btn-acao btn-gm" onclick="enviarMural('mail')">Enviar via Gmail (Seminário)</button>
+        </div>
+
+        <div class="citacao-biblica">
+            "Orai uns pelos outros para serdes curados. A oração de um justo é poderosa e eficaz." <br> <b>Tiago 5:16</b>
+        </div>
+
+        <div class="footer-nav">
+            <a href="1.html" class="btn btn-menu">⬅ VOLTAR AO MENU</a>
+            <a href="8.html" class="btn btn-proximo">LOGÍSTICA DE APOIO ➜</a>
+        </div>
+    </div>
+
+    <script>
+        function enviarMural(canal) {
+            const fone = "5566984666186";
+            const emailDestino = "escolateologicavance@gmail.com";
+
+            const intercessor = document.getElementById('nome_intercessor').value;
+            const acolhido = document.getElementById('acolhido_nome').value;
+            const categoria = document.getElementById('categoria_pedido').value;
+            const detalhe = document.getElementById('detalhe_pedido').value;
+            const urgencia = document.getElementById('urgencia_pedido').value;
+
+            if(!intercessor || !detalhe) {
+                alert("Por favor, identifique-se e descreva o pedido de oração.");
+                return;
+            }
+
+            const mensagem = 
+                `*MURAL DE ORAÇÃO - AMPARO HAZAQ*%0A%0A` +
+                `*Intercessor:* ${intercessor}%0A` +
+                `*Acolhido:* ${acolhido}%0A` +
+                `*Categoria:* ${categoria}%0A` +
+                `*Urgência:* ${urgencia}%0A` +
+                `*Pedido:* ${detalhe}`;
+
+            if (canal === 'wa') {
+                window.open(`https://api.whatsapp.com/send?phone=${fone}&text=${mensagem}`, '_blank');
+            } else {
+                const assunto = encodeURIComponent(`PEDIDO DE ORAÇÃO - ${acolhido}`);
+                const corpoEmail = mensagem.replace(/%0A/g, '%0D%0A').replace(/\*/g, '');
+                window.location.href = `mailto:${emailDestino}?subject=${assunto}&body=${corpoEmail}`;
+            }
+        }
+    </script>
+</body>
+</html>
