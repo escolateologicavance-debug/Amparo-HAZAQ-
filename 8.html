@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logística de Apoio - Amparo HAZAQ</title>
+    <style>
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header-top { background: #f8f8f8; padding: 30px 20px; border-bottom: 4px solid #d4af37; text-align: center; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .img-principal { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 25px; }
+        
+        h2 { color: #b8860b; text-transform: uppercase; font-size: 1.2rem; border-left: 5px solid #d4af37; padding-left: 15px; margin-top: 40px; }
+        
+        .instrucao-logistica { background: #fdf9ec; border: 1px solid #eaddb3; padding: 25px; border-radius: 8px; margin: 20px 0; }
+        .instrucao-logistica h3 { color: #b8860b; margin-top: 0; text-transform: uppercase; font-size: 1.1rem; }
+
+        .form-section { background: #f9f9f9; border: 1px solid #eee; padding: 25px; border-radius: 8px; margin-bottom: 25px; }
+        label { display: block; font-weight: bold; margin: 15px 0 5px; color: #333; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: inherit; margin-bottom: 10px; }
+
+        .area-envio { background: #1a1a1a; padding: 25px; border-radius: 8px; text-align: center; margin-top: 30px; }
+        .area-envio h3 { color: #d4af37; margin-top: 0; text-transform: uppercase; }
+        .btn-acao { border: none; padding: 18px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; text-transform: uppercase; margin-top: 10px; font-size: 0.9rem; }
+        .btn-wa { background: #25d366; color: white; }
+        .btn-gm { background: #d4af37; color: #1a1a1a; }
+        
+        .grid-funcoes { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .card-funcao { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 5px; font-size: 0.9rem; }
+        .card-funcao b { color: #b8860b; display: block; margin-bottom: 5px; }
+
+        .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 50px 0; }
+        .btn { text-align: center; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 0.8rem; }
+        .btn-menu { background: #555; color: #fff; }
+        .btn-proximo { background: #1a1a1a; color: #d4af37; border: 1px solid #1a1a1a; }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Logística de Apoio</h1>
+        <p><b>Organização de Escalas e Manutenção do Acolhimento</b></p>
+    </div>
+
+    <div class="container">
+        <img src="6-img.png" alt="Logística Amparo HAZAQ" class="img-principal">
+
+        <div class="instrucao-logistica">
+            <h3>A Mordomia do Serviço</h3>
+            <p>O Amparo HAZAQ acredita que a espiritualidade se manifesta na ordem. A logística de apoio garante que o ambiente de idosos e crianças seja seguro, limpo e recreativo. Servir na logística é sustentar a base para que o acolhimento emocional aconteça sem interrupções por falta de recursos ou falhas na escala.</p>
+        </div>
+
+        <h2>Áreas de Atuação Logística</h2>
+        <div class="grid-funcoes">
+            <div class="card-funcao">
+                <b>Limpeza e Higienização</b>
+                Manter o ambiente livre de riscos biológicos e com odor agradável, transmitindo paz e cuidado aos acolhidos.
+            </div>
+            <div class="card-funcao">
+                <b>Recreação e Eventos</b>
+                Planejar o tempo de lazer de forma estruturada, garantindo que as atividades ocorram nos horários previstos.
+            </div>
+            <div class="card-funcao">
+                <b>Manutenção Técnica</b>
+                Verificar lâmpadas, fiação, som e segurança elétrica, prevenindo acidentes e garantindo a operacionalidade.
+            </div>
+            <div class="card-funcao">
+                <b>Gestão de Estoque</b>
+                Monitorar a necessidade de mantimentos, fraldas e itens de higiene para que nunca falte o básico.
+            </div>
+        </div>
+
+        <h2>Reportar Necessidade ou Escala</h2>
+        <div class="form-section">
+            <label>Seminarista Responsável:</label>
+            <input type="text" id="nome_logistica" placeholder="Seu nome completo">
+
+            <label>Tipo de Registro:</label>
+            <select id="tipo_logistica">
+                <option value="Atualização de Escala">Atualização de Escala (Presença)</option>
+                <option value="Falta de Mantimentos">Falta de Mantimentos / Itens</option>
+                <option value="Manutenção Necessária">Manutenção ou Reparo Técnico</option>
+                <option value="Apoio em Evento">Planejamento de Atividade/Lazer</option>
+            </select>
+
+            <label>Descrição da Demanda:</label>
+            <textarea id="descricao_logistica" rows="5" placeholder="Descreva o que foi realizado ou o que está faltando para o bom andamento do amparo..."></textarea>
+            
+            <label>Grau de Prioridade:</label>
+            <select id="prioridade_logistica">
+                <option value="Preventiva">Preventiva (Rotina)</option>
+                <option value="Corretiva">Corretiva (Necessita atenção breve)</option>
+                <option value="Imediata">Imediata (Risco à operação)</option>
+            </select>
+        </div>
+
+        <div class="area-envio">
+            <h3>Enviar Relatório de Logística</h3>
+            <button class="btn-acao btn-wa" onclick="enviarLogistica('wa')">Enviar via WhatsApp (Logística Central)</button>
+            <button class="btn-acao btn-gm" onclick="enviarLogistica('mail')">Enviar via Gmail (Escola Teológica)</button>
+        </div>
+
+        <div class="footer-nav">
+            <a href="1.html" class="btn btn-menu">⬅ VOLTAR AO MENU</a>
+            <a href="9.html" class="btn btn-proximo">AUTOAVALIAÇÃO ➜</a>
+        </div>
+    </div>
+
+    <script>
+        function enviarLogistica(canal) {
+            const fone = "5566984666186";
+            const emailDestino = "escolateologicavance@gmail.com";
+
+            const responsavel = document.getElementById('nome_logistica').value;
+            const tipo = document.getElementById('tipo_logistica').value;
+            const descricao = document.getElementById('descricao_logistica').value;
+            const prioridade = document.getElementById('prioridade_logistica').value;
+
+            if(!responsavel || !descricao) {
+                alert("Por favor, preencha seu nome e a descrição da demanda logística.");
+                return;
+            }
+
+            const mensagem = 
+                `*LOGÍSTICA DE APOIO - AMPARO HAZAQ*%0A%0A` +
+                `*Responsável:* ${responsavel}%0A` +
+                `*Tipo:* ${tipo}%0A` +
+                `*Prioridade:* ${prioridade}%0A` +
+                `*Descrição:* ${descricao}`;
+
+            if (canal === 'wa') {
+                window.open(`https://api.whatsapp.com/send?phone=${fone}&text=${mensagem}`, '_blank');
+            } else {
+                const assunto = encodeURIComponent(`LOGÍSTICA AMPARO - ${tipo}`);
+                const corpoEmail = mensagem.replace(/%0A/g, '%0D%0A').replace(/\*/g, '');
+                window.location.href = `mailto:${emailDestino}?subject=${assunto}&body=${corpoEmail}`;
+            }
+        }
+    </script>
+</body>
+</html>
