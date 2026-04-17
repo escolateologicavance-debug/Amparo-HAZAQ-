@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitação Órfãos - Amparo HAZAQ</title>
+    <style>
+        body { background-color: #ffffff; color: #1a1a1a; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header-top { background: #f8f8f8; padding: 30px 20px; border-bottom: 4px solid #d4af37; text-align: center; }
+        .hebraico { font-size: 2.2rem; color: #d4af37; display: block; font-family: serif; margin: 10px 0; }
+        
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .img-principal { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 25px; }
+
+        .alerta-seguranca { background: #fff5f5; border: 2px solid #cc0000; padding: 25px; border-radius: 8px; margin: 20px 0; color: #b22222; }
+        .alerta-seguranca h3 { margin-top: 0; text-transform: uppercase; font-size: 1.1rem; text-decoration: underline; }
+
+        .citacao { font-style: italic; color: #555; text-align: center; margin: 25px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 10px; }
+
+        h2 { color: #b8860b; text-transform: uppercase; font-size: 1.2rem; border-left: 5px solid #d4af37; padding-left: 15px; margin-top: 40px; }
+
+        .diretrizes { background: #fdf9ec; border: 1px solid #eaddb3; padding: 25px; border-radius: 8px; margin: 20px 0; }
+        .diretrizes h3 { color: #b8860b; margin-top: 0; text-transform: uppercase; }
+
+        .botao-detalhe { background: #f1f1f1; border: 1px solid #ddd; color: #1a1a1a; width: 100%; text-align: left; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 5px; margin-top: 10px; display: flex; justify-content: space-between; }
+        .conteudo-detalhe { display: none; padding: 15px; background: #fafafa; border: 1px solid #eee; border-radius: 0 0 5px 5px; font-size: 0.95rem; }
+
+        .normas-capelania { background: #1a1a1a; color: white; padding: 25px; border-radius: 8px; margin-top: 30px; }
+        .normas-capelania h3 { color: #d4af37; margin-top: 0; }
+
+        .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 50px 0; }
+        .btn { text-align: center; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-menu { background: #555; color: #fff; }
+        .btn-proximo { background: #1a1a1a; color: #d4af37; border: 1px solid #1a1a1a; }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Amparo HAZAQ</h1>
+        <span class="hebraico">חזק</span>
+        <p><b>Capacitação para Amparo ao Órfão</b></p>
+    </div>
+
+    <div class="container">
+        <img src="1-img.png" alt="Amparo HAZAQ" class="img-principal">
+
+        <div class="alerta-seguranca">
+            <h3>⚠️ PROTOCOLO DE SEGURANÇA E INTEGRIDADE</h3>
+            <p><b>EM HIPÓTESE ALGUMA</b> o seminarista ou voluntário deverá prestar trabalhos de cuidados ou permanecer em ambientes fechados com crianças <b>SOZINHO</b>.</p>
+            <p>O Seminário HAZAQ mantém rigor absoluto sobre este termo. Todo atendimento ou interação deve ser realizado na presença de, no mínimo, dois responsáveis. Esta norma visa a proteção inegociável da criança e a integridade ministerial do Seminarista.</p>
+        </div>
+
+        <div class="citacao">
+            "Deixai vir a mim as crianças e não as impeçais, porque delas é o Reino de Deus." <br> <b>Mateus 19:14</b>
+        </div>
+
+        <h2>Fundamentos do Acolhimento</h2>
+        <p>A criança órfã ou em estado de abandono enfrenta o que chamamos de "Fome de Referência". Sua missão é ser uma base estável em um mundo que, para elas, foi marcado pela ruptura.</p>
+
+        <div class="diretrizes">
+            <h3>Diretrizes Práticas - Crianças</h3>
+            <ul>
+                <li>Seja uma referência estável e constante</li>
+                <li>Não prometa o que não pode cumprir</li>
+                <li>Disciplina com propósito, nunca com agressividade</li>
+                <li>Construa vínculo através da constância</li>
+                <li>Mantenha autoridade amorosa e firmeza com respeito</li>
+            </ul>
+        </div>
+
+        <h2>Detalhamento do Trato Ministerial</h2>
+        <p>Clique nos tópicos para instruções detalhadas:</p>
+
+        <div class="detalhe-container">
+            <button class="botao-detalhe" onclick="toggle('c1')">RECONSTRUÇÃO DE VÍNCULO <span>+</span></button>
+            <div id="c1" class="conteudo-detalhe">
+                Crianças abandonadas esperam a próxima partida. Para elas, adultos são transitórios. Sua presença deve ser previsível e segura. Evite despedidas dramáticas ou ausências injustificadas que reforcem o trauma do abandono.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('c2')">AUTORIDADE E DISCIPLINA <span>+</span></button>
+            <div id="c2" class="conteudo-detalhe">
+                A disciplina no HAZAQ visa o caráter, não o medo. Nunca utilize força física ou gritos. Estabeleça limites claros e explique o porquê das regras. O objetivo é prepará-los para a vida social e ministerial através da ordem.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('c3')">EXPOSIÇÃO E PRIVACIDADE <span>+</span></button>
+            <div id="c3" class="conteudo-detalhe">
+                Proteja a imagem da criança. É terminantemente proibido o uso de fotos das crianças para proselitismo ou autopromoção. A dor do órfão não é espetáculo. Respeite o histórico familiar e a privacidade emocional de cada menor.
+               </div>
+                
+                        <div class="detalhe-container">
+            <button class="botao-detalhe" onclick="toggle('c4')">ALIMENTAÇÃO DA CRIANÇA E ADOLESCENTE <span>+</span></button>
+            <div id="c4" class="conteudo-detalhe">
+                A alimentação é a base do desenvolvimento biológico e cognitivo. <b>Instrução:</b> Monitore distúrbios alimentares (comum em jovens com histórico de trauma). A refeição deve ser um momento de comunhão e ordem, nunca de punição ou barganha. Garanta que a dieta seja balanceada, respeitando restrições médicas, mas incentivando a autonomia na escolha consciente.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('c5')">HIGIENE PESSOAL <span>+</span></button>
+            <div id="c5" class="conteudo-detalhe">
+                Foco na dignidade e no ensino do autocuidado. <b>Instrução:</b> Para crianças menores, o auxílio deve ser lúdico. Para adolescentes, o respeito à privacidade é absoluto. Ensine a importância da higiene como preservação do "Templo", fornecendo os itens necessários com constância. Monitore sinais de negligência pessoal, que podem indicar sofrimento emocional.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('c6')">DESCANSO DA CRIANÇA E ADOLESCENTE <span>+</span></button>
+            <div id="c6" class="conteudo-detalhe">
+                O crescimento ocorre durante o sono. <b>Instrução:</b> Estabeleça rotinas rígidas de horários para desligar telas e luzes. O ambiente de dormitório deve ser neutro e seguro. Para adolescentes, o descanso também envolve o "tempo de silêncio" para introspecção e oração, fundamentais para a saúde mental e espiritual.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('c7')">LAZER DA CRIANÇA E ADOLESCENTE <span>+</span></button>
+            <div id="c7" class="conteudo-detalhe">
+                O lazer deve canalizar energias e promover socialização. <b>Instrução:</b> Priorize atividades que desenvolvam talentos (música, esportes, artes). O lazer nunca deve ser ocioso ou voltado ao isolamento digital. Use o brincar para ensinar valores como cooperação, paciência e resiliência diante da derrota.
+            </div>
+
+            <button class="botao-detalhe" onclick="toggle('c8')">VISITAS E VÍNCULOS EXTERNOS <span>+</span></button>
+            <div id="c8" class="conteudo-detalhe">
+                O contato externo é sensível e deve ser supervisionado. <b>Instrução:</b> Visitas de parentes ou terceiros devem seguir rigorosamente o Plano de Atendimento Individual (PAI). O seminarista deve observar o comportamento da criança antes e depois da visita, reportando imediatamente qualquer alteração emocional ou sinais de desconforto.
+            </div>
+
+            </div>
+        </div>
+
+        <div class="normas-capelania">
+            <h3>Exigência sobre Visitas Evangelísticas</h3>
+            <ul>
+                <li>Não toque nas crianças sem necessidade técnica ou permissão da coordenação.</li>
+                <li>Abordagem espiritual deve ser lúdica e respeitosa, sem pressão psicológica.</li>
+                <li>Tom de voz moderado: o ambiente de acolhimento deve transmitir paz.</li>
+                <li>Cânticos em ritmos alegres, porém suaves e volumes controlados.</li>
+                <li><b>Proibido proselitismo agressivo.</b> O foco é o amor cristão prático e a instrução bíblica genuína.</li>
+            </ul>
+        </div>
+
+        <div class="footer-nav">
+            <a href="1.html" class="btn btn-menu">⬅ VOLTAR AO MENU</a>
+            <a href="5.html" class="btn btn-proximo">PRÓXIMA AULA ➜</a>
+        </div>
+    </div>
+
+    <script>
+        function toggle(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
