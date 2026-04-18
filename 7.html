@@ -32,9 +32,27 @@
         .btn { text-align: center; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; font-size: 0.8rem; }
         .btn-menu { background: #555; color: #fff; }
         .btn-proximo { background: #1a1a1a; color: #d4af37; border: 1px solid #1a1a1a; }
+
+        .controles-audio { text-align: right; background: #1a1a1a; padding: 10px; }
     </style>
 </head>
 <body>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+  
+<audio id="musica_hazaq" loop autoplay>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+<div class="controles-audio">
+    <button onclick="document.getElementById('musica_hazaq').muted = !document.getElementById('musica_hazaq').muted" style="cursor:pointer; background:none; border:1px solid #fff; color:#fff; border-radius:5px; padding:5px 10px;">
+        Mudar Áudio (Mute/Unmute)
+    </button>
+</div>
 
     <div class="header-top">
         <h1>Mural de Oração</h1>
@@ -93,6 +111,14 @@
     </div>
 
     <script>
+        // Tenta tocar o áudio na primeira interação do usuário com a página
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('musica_hazaq');
+            if (audio.paused) {
+                audio.play();
+            }
+        }, { once: true });
+
         function enviarMural(canal) {
             const fone = "5566984666186";
             const emailDestino = "escolateologicavance@gmail.com";
