@@ -145,7 +145,7 @@
         </div>
     </div>
 
-    <script>
+       <script>
         function avaliar() {
             const nome = document.getElementById('nome_cert').value;
             const cpf = document.getElementById('cpf_cert').value;
@@ -155,55 +155,51 @@
             const form = document.getElementById('quizForm');
             const data = new FormData(form);
             let nota = 0;
+            // Soma os valores marcados
             for (let v of data.values()) { nota += parseInt(v); }
 
-            if(nota >= 7) {
+            if(nota >= 10) { // Ajustado para sua exigência de 10 acertos
                 gerarCertificado(nome, cpf);
             } else {
-                alert("Nota: " + nota + ". Você precisa de no mínimo 7 para certificar. Revise o material!");
+                alert("Nota: " + nota + ". Você precisa acertar as 10 questões para certificar. Revise as respostas!");
             }
         }
 
         function gerarCertificado(nome, cpf) {
-            const win = window.open('', '_blank');
-            win.document.write(`
-                <html>
-                <head>
-                    <title>Certificado - ${nome}</title>
-                    <style>
-                        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'serif'; }
-                        .moldura { border: 15px double #d4af37; padding: 50px; width: 800px; text-align: center; position: relative; }
-                        h1 { font-size: 50px; margin: 0; color: #1a1a1a; }
-                        .slogan { font-style: italic; color: #555; margin-bottom: 20px; }
-                        h2 { color: #b8860b; text-transform: uppercase; letter-spacing: 5px; }
-                        .texto { font-size: 20px; line-height: 1.8; margin: 30px 0; color: #333; }
-                        .nome-aluno { font-size: 30px; font-weight: bold; text-decoration: underline; color: #000; }
-                        .data { margin-top: 50px; font-weight: bold; }
-                        @media print { .no-print { display: none; } }
-                    </style>
-                </head>
-                <body>
-                    <div class="moldura">
-                        <h1>AVANCE</h1>
-                        <div class="slogan">"Ultrapassando limites!"</div>
-                        <h2>Seminário HAZAQ</h2>
-                        <div class="slogan">"A Escolha dos Fortes"</div>
-                        <br>
-                        <div class="texto">
-                            Certificamos que o(a) seminarista <br>
-                            <span class="nome-aluno">${nome.toUpperCase()}</span> <br>
-                            inscrito sob o CPF: <b>${cpf}</b>, concluiu com êxito a formação em <br>
-                            <b>AMPARO SOCIAL E GESTÃO DE RISCO</b>.
-                        </div>
-                        <div class="data">Itanhangá-MT, ${new Date().toLocaleDateString('pt-BR')}</div>
-                        <br>
-                        <button class="no-print" onclick="window.print()" style="padding:10px 20px; background:#d4af37; border:none; cursor:pointer; font-weight:bold;">IMPRIMIR AGORA</button>
+            // Em vez de window.open, reescrevemos o body da página atual
+            document.body.innerHTML = `
+                <style>
+                    body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'serif'; background: #fff; }
+                    .moldura { border: 15px double #d4af37; padding: 40px; width: 90%; max-width: 800px; text-align: center; position: relative; background: #fff; }
+                    h1 { font-size: 45px; margin: 0; color: #1a1a1a; }
+                    .slogan { font-style: italic; color: #555; margin-bottom: 15px; }
+                    h2 { color: #b8860b; text-transform: uppercase; letter-spacing: 5px; font-size: 22px; }
+                    .texto { font-size: 18px; line-height: 1.6; margin: 25px 0; color: #333; }
+                    .nome-aluno { font-size: 28px; font-weight: bold; text-decoration: underline; color: #000; display: block; margin: 10px 0; }
+                    .data { margin-top: 40px; font-weight: bold; }
+                    .btn-print { padding: 15px 30px; background: #d4af37; border: none; cursor: pointer; font-weight: bold; margin-top: 20px; text-transform: uppercase; }
+                    @media print { .no-print { display: none; } body { padding: 0; } .moldura { border: 10px double #d4af37; } }
+                </style>
+                <div class="moldura">
+                    <h1>AVANCE</h1>
+                    <div class="slogan">"Ultrapassando limites!"</div>
+                    <h2>Seminário HAZAQ</h2>
+                    <div class="slogan">"A Escolha dos Fortes"</div>
+                    <br>
+                    <div class="texto">
+                        Certificamos que o(a) seminarista <br>
+                        <span class="nome-aluno">${nome.toUpperCase()}</span>
+                        inscrito sob o CPF: <b>${cpf}</b>, concluiu com êxito a formação em <br>
+                        <b>AMPARO SOCIAL E GESTÃO DE RISCO</b>.
                     </div>
-                </body>
-                </html>
-            `);
-            win.document.close();
+                    <div class="data">Itanhangá-MT, ${new Date().toLocaleDateString('pt-BR')}</div>
+                    <br>
+                    <button class="btn-print no-print" onclick="window.print()">IMPRIMIR OU SALVAR PDF</button>
+                    <p class="no-print" style="margin-top:15px;"><a href="javascript:location.reload()">Voltar para a avaliação</a></p>
+                </div>
+            `;
         }
     </script>
+
 </body>
 </html>
