@@ -43,13 +43,13 @@
     <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
 </div>
   
-<audio id="hino-hazaq.mp3" loop autoplay>
+<audio id="hino-hazaq" loop autoplay>
     <source src="hino-hazaq.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
 </audio>
 
 <div class="controles-audio">
-    <button onclick="document.getElementById('hino-hazaq.mp3).muted = !document.getElementById('hino-hazaq.mp3).muted" style="cursor:pointer; background:none; border:1px solid #fff; color:#fff; border-radius:5px; padding:5px 10px;">
+    <button onclick="document.getElementById('hino-hazaq').muted = !document.getElementById('hino-hazaq').muted" style="cursor:pointer; background:none; border:1px solid #fff; color:#fff; border-radius:5px; padding:5px 10px;">
         Áudio (Mute/Unmute)
     </button>
 </div>
@@ -111,9 +111,8 @@
     </div>
 
     <script>
-        // Tenta tocar o áudio na primeira interação do usuário com a página
         document.body.addEventListener('click', function() {
-            const audio = document.getElementById('musica_hazaq');
+            const audio = document.getElementById('hino-hazaq');
             if (audio.paused) {
                 audio.play();
             }
