@@ -30,7 +30,7 @@ const assets = [
   './10-img.png',
   './11-img.png',
   './12-img.png',
-   '.hino-hazaq.mp3'
+   '.musica.mp3'
 ];
 
 // Instalação: Salva os arquivos no cache
