@@ -14,17 +14,17 @@
         .cabecalho-cert p { margin: 5px 0; font-style: italic; color: #fff; }
 
         .form-dados { background: #fdf9ec; padding: 20px; border: 1px solid #eaddb3; border-radius: 8px; margin-bottom: 30px; }
-        input[type="text"], textarea, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        input[type="text"] { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
 
         .questao { background: #f9f9f9; padding: 20px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 20px; }
         .questao h3 { margin-top: 0; color: #b8860b; font-size: 1.1rem; }
-        .opcoes label { display: block; background: #fff; padding: 10px; border: 1px solid #ddd; margin: 5px 0; border-radius: 4px; cursor: pointer; }
+        .opcoes label { display: block; background: #fff; padding: 12px; border: 1px solid #ddd; margin: 8px 0; border-radius: 4px; cursor: pointer; transition: 0.2s; }
+        .opcoes label:hover { background: #f0f0f0; }
         .opcoes input { margin-right: 10px; }
 
-        .btn-final { background: #d4af37; color: #1a1a1a; border: none; padding: 20px; width: 100%; font-weight: bold; text-transform: uppercase; cursor: pointer; border-radius: 4px; font-size: 1.1rem; }
-        #resultado { display: none; text-align: center; padding: 40px; background: #f0fff4; border: 2px solid #38a169; border-radius: 8px; margin-top: 20px; }
+        .btn-final { background: #d4af37; color: #1a1a1a; border: none; padding: 20px; width: 100%; font-weight: bold; text-transform: uppercase; cursor: pointer; border-radius: 4px; font-size: 1.1rem; margin-top: 20px; }
         
-        .assinatura { margin-top: 40px; text-align: center; font-size: 0.8rem; color: #777; border-top: 1px solid #eee; padding-top: 20px; }
+        .footer-assinatura { text-align: center; margin-top: 40px; padding: 20px; font-size: 0.9rem; color: #555; }
     </style>
 </head>
 <body>
@@ -33,42 +33,42 @@
         <div class="cabecalho-cert">
             <h1>AVANCE</h1>
             <p>"Ultrapassando limites!"</p>
-            <hr style="border: 0.5px solid #333;">
+            <hr style="border: 0.5px solid #333; width: 50%;">
             <h2>Seminário HAZAQ</h2>
             <p>"A Escolha dos Fortes"</p>
         </div>
-        <p><b>Certificação de Amparador Social</b></p>
+        <p><b>AVALIAÇÃO DE COMPETÊNCIA SOCIAL</b></p>
     </div>
 
     <div class="container">
         <div class="form-dados">
-            <label>Nome Completo para o Certificado:</label>
-            <input type="text" id="nome_cert" placeholder="Nome sem abreviações">
-            <label>CPF:</label>
+            <label><b>Nome Completo (Para o Certificado):</b></label>
+            <input type="text" id="nome_cert" placeholder="Digite seu nome completo">
+            <label><b>CPF:</b></label>
             <input type="text" id="cpf_cert" placeholder="000.000.000-00">
         </div>
 
         <form id="quizForm">
             <div class="questao">
-                <h3>1. [Simulação] Um idoso sob seu cuidado recusa a medicação e se torna agressivo verbalmente. Sua conduta é:</h3>
+                <h3>1. [Cenário] Um idoso sob seu cuidado recusa a medicação e torna-se agressivo. Qual a conduta HAZAQ?</h3>
                 <div class="opcoes">
-                    <label><input type="radio" name="q1" value="0"> Impor autoridade e obrigar a ingestão para o bem dele.</label>
-                    <label><input type="radio" name="q1" value="1"> Recuar, ouvir com paciência e tentar novamente após acalmá-lo.</label>
-                    <label><input type="radio" name="q1" value="0"> Ignorar e anotar no relatório que ele foi difícil.</label>
+                    <label><input type="radio" name="q1" value="0"> Impor autoridade e obrigar a ingestão.</label>
+                    <label><input type="radio" name="q1" value="1"> Recuar, ouvir com paciência e tentar após acalmá-lo.</label>
+                    <label><input type="radio" name="q1" value="0"> Deixar o medicamento na mesa e sair.</label>
                 </div>
             </div>
 
             <div class="questao">
-                <h3>2. [Sanitariedade] Ao encontrar uma lata de alimento estufada na dispensa, você deve:</h3>
+                <h3>2. [Sanitariedade] O uso de luvas e máscaras é obrigatório para:</h3>
                 <div class="opcoes">
-                    <label><input type="radio" name="q2" value="0"> Abrir para cheirar e ver se o conteúdo ainda serve.</label>
-                    <label><input type="radio" name="q2" value="1"> Descartar imediatamente, pois indica contaminação bacteriana grave.</label>
-                    <label><input type="radio" name="q2" value="0"> Cozinhar em alta temperatura para matar os germes.</label>
+                    <label><input type="radio" name="q2" value="1"> Manuseio de alimentos, remédios e banhos.</label>
+                    <label><input type="radio" name="q2" value="0"> Apenas quando o ambiente parecer sujo.</label>
+                    <label><input type="radio" name="q2" value="0"> Apenas no contato com crianças.</label>
                 </div>
             </div>
 
             <div class="questao">
-                <h3>3. [V/F] O uso de luvas de látex substitui a necessidade de lavar as mãos antes e depois do contato com o acolhido.</h3>
+                <h3>3. [V/F] Alimentos com embalagem íntegra, mas com data de validade vencida há 1 dia, podem ser servidos.</h3>
                 <div class="opcoes">
                     <label><input type="radio" name="q3" value="0"> Verdadeiro</label>
                     <label><input type="radio" name="q3" value="1"> Falso</label>
@@ -76,71 +76,133 @@
             </div>
 
             <div class="questao">
-                <h3>4. [Caráter] O "Domínio Próprio" é um valor HAZAQ. Isso significa que:</h3>
+                <h3>4. [Logística] Uma falha na iluminação de um corredor de acesso é classificada como:</h3>
                 <div class="opcoes">
-                    <label><input type="radio" name="q4" value="1"> Minhas emoções não devem ditar meu tratamento com o próximo.</label>
-                    <label><input type="radio" name="q4" value="0"> Devo suprimir meus sentimentos e nunca buscar ajuda.</label>
-                    <label><input type="radio" name="q4" value="0"> Posso ser rígido se o ambiente estiver desorganizado.</label>
+                    <label><input type="radio" name="q4" value="0"> Preventiva</label>
+                    <label><input type="radio" name="q4" value="1"> Corretiva Imediata (Risco de queda)</label>
+                    <label><input type="radio" name="q4" value="0"> Opcional</label>
                 </div>
             </div>
 
             <div class="questao">
-                <h3>5. Qual a prioridade de uma goteira sobre o leito de um acolhido?</h3>
+                <h3>5. [Espelho] O valor "HAZAQ" (Fortalecer) implica em:</h3>
                 <div class="opcoes">
-                    <label><input type="radio" name="q5" value="0"> Preventiva</label>
-                    <label><input type="radio" name="q5" value="0"> Corretiva</label>
-                    <label><input type="radio" name="q5" value="1"> Imediata (Risco à operação)</label>
+                    <label><input type="radio" name="q5" value="1"> Fortalecer o outro através da minha própria estabilidade e fé.</label>
+                    <label><input type="radio" name="q5" value="0"> Ser fisicamente mais forte que o acolhido.</label>
+                    <label><input type="radio" name="q5" value="0"> Cobrar resultados rápidos dos idosos.</label>
                 </div>
             </div>
 
             <div class="questao">
-                <h3>10. [Áudio/Relato] Descreva brevemente sua maior vitória espiritual nesta jornada:</h3>
-                <textarea id="relato_final" rows="3"></textarea>
+                <h3>6. [V/F] A dedetização do ambiente deve ser apenas reativa (quando houver pragas).</h3>
+                <div class="opcoes">
+                    <label><input type="radio" name="q6" value="0"> Verdadeiro</label>
+                    <label><input type="radio" name="q6" value="1"> Falso (Deve ser periódica/preventiva)</label>
+                </div>
             </div>
 
-            <button type="button" class="btn-final" onclick="processarAvaliacao()">Finalizar e Gerar Certificado</button>
+            <div class="questao">
+                <h3>7. Ao cuidar de uma criança em orfanato, qual a postura correta quanto à afetividade?</h3>
+                <div class="opcoes">
+                    <label><input type="radio" name="q7" value="1"> Afeto respeitoso, mantendo a postura de mentor e protetor.</label>
+                    <label><input type="radio" name="q7" value="0"> Indiferença total para não criar laços.</label>
+                    <label><input type="radio" name="q7" value="0"> Substituir a figura dos pais em todos os aspectos.</label>
+                </div>
+            </div>
+
+            <div class="questao">
+                <h3>8. Higienização de talheres e pratos deve ser feita:</h3>
+                <div class="opcoes">
+                    <label><input type="radio" name="q8" value="1"> Com rigor químico e inspeção visual após secagem.</label>
+                    <label><input type="radio" name="q8" value="0"> Apenas com água corrente se o uso foi rápido.</label>
+                    <label><input type="radio" name="q8" value="0"> Uma vez por semana.</label>
+                </div>
+            </div>
+
+            <div class="questao">
+                <h3>9. O Diário de Bordo serve primordialmente para:</h3>
+                <div class="opcoes">
+                    <label><input type="radio" name="q9" value="0"> Cumprir tabela para a coordenação.</label>
+                    <label><input type="radio" name="q9" value="1"> Garantir a continuidade do cuidado e proteger o seminarista.</label>
+                    <label><input type="radio" name="q9" value="0"> Anotar fofocas do abrigo.</label>
+                </div>
+            </div>
+
+            <div class="questao">
+                <h3>10. [V/F] A integridade do "Estar" (universalmente transitório) é o foco do suporte emocional HAZAQ.</h3>
+                <div class="opcoes">
+                    <label><input type="radio" name="q10" value="1"> Verdadeiro</label>
+                    <label><input type="radio" name="q10" value="0"> Falso</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn-final" onclick="avaliar()">Finalizar e Gerar Certificado</button>
         </form>
 
-        <div id="resultado">
-            <h2 style="color: #276749;">APROVADO! Média <span id="nota"></span></h2>
-            <p>Parabéns! Seu certificado foi gerado e enviado para validação.</p>
-            <button class="btn-final" style="background: #1a1a1a; color: #d4af37;" onclick="alert('Certificado enviado para o e-mail da coordenação!')">Imprimir Certificado (PDF)</button>
-        </div>
-
-        <div class="assinatura">
+        <div class="footer-assinatura">
             <b>Gilberto Moreira</b><br>
             Itanhangá-MT | BR
         </div>
     </div>
 
     <script>
-        function processarAvaliacao() {
+        function avaliar() {
             const nome = document.getElementById('nome_cert').value;
             const cpf = document.getElementById('cpf_cert').value;
             
-            if(!nome || !cpf) {
-                alert("Preencha Nome e CPF para o certificado!");
-                return;
-            }
+            if(!nome || !cpf) { alert("Informe Nome e CPF!"); return; }
 
-            let acertos = 0;
             const form = document.getElementById('quizForm');
-            const dados = new FormData(form);
+            const data = new FormData(form);
+            let nota = 0;
+            for (let v of data.values()) { nota += parseInt(v); }
 
-            for (let value of dados.values()) {
-                acertos += parseInt(value);
-            }
-
-            // Simulando 10 questões (ajuste conforme o número final de questões)
-            const notaFinal = (acertos / 5) * 10; // Exemplo para 5 questões objetivas
-
-            if(notaFinal >= 7) {
-                document.getElementById('quizForm').style.display = 'none';
-                document.getElementById('resultado').style.display = 'block';
-                document.getElementById('nota').innerText = notaFinal.toFixed(1);
+            if(nota >= 7) {
+                gerarCertificado(nome, cpf);
             } else {
-                alert("Sua média foi " + notaFinal.toFixed(1) + ". Revise os módulos e tente novamente para obter a certificação.");
+                alert("Nota: " + nota + ". Você precisa de no mínimo 7 para certificar. Revise o material!");
             }
+        }
+
+        function gerarCertificado(nome, cpf) {
+            const win = window.open('', '_blank');
+            win.document.write(`
+                <html>
+                <head>
+                    <title>Certificado - ${nome}</title>
+                    <style>
+                        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: 'serif'; }
+                        .moldura { border: 15px double #d4af37; padding: 50px; width: 800px; text-align: center; position: relative; }
+                        h1 { font-size: 50px; margin: 0; color: #1a1a1a; }
+                        .slogan { font-style: italic; color: #555; margin-bottom: 20px; }
+                        h2 { color: #b8860b; text-transform: uppercase; letter-spacing: 5px; }
+                        .texto { font-size: 20px; line-height: 1.8; margin: 30px 0; color: #333; }
+                        .nome-aluno { font-size: 30px; font-weight: bold; text-decoration: underline; color: #000; }
+                        .data { margin-top: 50px; font-weight: bold; }
+                        @media print { .no-print { display: none; } }
+                    </style>
+                </head>
+                <body>
+                    <div class="moldura">
+                        <h1>AVANCE</h1>
+                        <div class="slogan">"Ultrapassando limites!"</div>
+                        <h2>Seminário HAZAQ</h2>
+                        <div class="slogan">"A Escolha dos Fortes"</div>
+                        <br>
+                        <div class="texto">
+                            Certificamos que o(a) seminarista <br>
+                            <span class="nome-aluno">${nome.toUpperCase()}</span> <br>
+                            inscrito sob o CPF: <b>${cpf}</b>, concluiu com êxito a formação em <br>
+                            <b>AMPARO SOCIAL E GESTÃO DE RISCO</b>.
+                        </div>
+                        <div class="data">Itanhangá-MT, ${new Date().toLocaleDateString('pt-BR')}</div>
+                        <br>
+                        <button class="no-print" onclick="window.print()" style="padding:10px 20px; background:#d4af37; border:none; cursor:pointer; font-weight:bold;">IMPRIMIR AGORA</button>
+                    </div>
+                </body>
+                </html>
+            `);
+            win.document.close();
         }
     </script>
 </body>
