@@ -1,4 +1,4 @@
-const CACHE_NAME = 'amparo-hazaq-v1';
+const CACHE_NAME = 'amparo-hazaq-v2';
 
 // Lista de arquivos para cache (1.html a 11.html e imagens 1 a 12)
 const assets = [
@@ -30,6 +30,7 @@ const assets = [
   './10-img.png',
   './11-img.png',
   './12-img.png',
+  './vicios-img.png',
  './hino-hazaq.mp3'
 ];
 
